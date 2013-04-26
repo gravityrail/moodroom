@@ -1,0 +1,7 @@
+<%= form_for current_user, :remote => true do |f| %>
+  <%= f.text_field :mood %>
+<% end %>
+
+<% @users.each do |user| %>
+  <%= gravatar_image_tag(user.email, :alt => user.email) %>
+<% end %>
